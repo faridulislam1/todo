@@ -164,3 +164,62 @@ ul.navbar li a:hover {
         text-align: center;
         color: #cccc;
 }
+
+.edit-form-container,
+.add-form-container {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.edit-form-container h1,
+.add-form-container h1 {
+        text-align: center;
+}
+
+.edit-form-container label,
+.add-form-container label {
+        display: block;
+        margin-bottom: 5px;
+}
+
+.edit-form-container input[type="text"],
+.add-form-container input[type="text"],
+.edit-form-container input[type="email"],
+.add-form-container input[type="email"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ccc;
+        border-radius: 3px;
+        transition: border-color 0.2s ease-in-out;
+}
+
+.edit-form-container input[type="text"]:focus,
+.add-form-container input[type="text"]:focus,
+.edit-form-container input[type="email"]:focus,
+.add-form-container input[type="email"]:focus {
+        border-color: #007bff;
+}
+
+.edit-form-container button,
+.add-form-container button {
+        display: block;
+        width: 100%;
+        padding: 10px;
+        border: none;
+        border-radius: 3px;
+        background-color: #007bff;
+        color: #fff;
+        font-size: 16px;
+        cursor: pointer;
+}
+
+.edit-form-container button:hover,
+.add-form-container button:hover {
+        background-color: #0056b3;
+}

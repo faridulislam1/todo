@@ -186,7 +186,7 @@ $todos = $conn->query("SELECT * FROM todos WHERE checked = 0 ORDER BY id DESC");
                                                         <td><?php echo $todo['address']; ?></td>
                                                         <td>
                                                                 <span id="<?php echo $todo['id']; ?>" class="remove-to-do">x</span>
-                                                                <a href="../app/edit.php" class="edit-button" onclick="showEditForm('<?php echo $todo['id']; ?>')">Edit</a>
+                                                                <a href="../app/edit.php?id=<?php echo $todo['id']; ?>" class="edit-button">Edit</a>
                                                                 <?php if ($todo['checked']) { ?>
                                                                         <input type="checkbox" class="check-box" data-todo-id="<?php echo $todo['id']; ?>" checked />
                                                                 <?php } else { ?>
@@ -202,9 +202,7 @@ $todos = $conn->query("SELECT * FROM todos WHERE checked = 0 ORDER BY id DESC");
 
         </div>
         </div>
-        <div id="edit-form" style="display: none;">
-                <!-- Edit form content here -->
-        </div>
+
 
         <script src="js/jquery-3.2.1.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
