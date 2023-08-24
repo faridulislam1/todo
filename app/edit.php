@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <input type="text" name="address" value="<?php echo $todoData['address']; ?>" required><br><br>
 
             <button type="submit">Update Task</button>
-            <a href="../view/dashboard.php">Dashboard</a>
+            <button><a href="../view/dashboard.php">Dashboard</a></button>
         </form>
     </div>
 
