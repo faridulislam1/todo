@@ -2,7 +2,7 @@
 require '../database/connect.php'; // Make sure to include the necessary connection setup
 
 if (!isset($_GET['id'])) {
-    header("Location: dashboard.php"); // Redirect if no task ID is provided
+    header("Location: ../view/dashboard.php"); // Redirect if no task ID is provided
     exit();
 }
 
@@ -12,7 +12,7 @@ $todo->execute([$taskId]);
 $todoData = $todo->fetch(PDO::FETCH_ASSOC);
 
 if (!$todoData) {
-    header("Location: dashboard.php"); // Redirect if task ID doesn't exist
+    header("Location: ../view/dashboard.php"); // Redirect if task ID doesn't exist
     exit();
 }
 
@@ -40,14 +40,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Task</title>
-    <link rel="stylesheet" href="../css/style.css"> 
-    
+    <link rel="stylesheet" href="../css/style.css">
+
     <style>
-        form{
+        form {
             text-align: center;
-            
+
         }
-        h1{
+
+        h1 {
             text-align: center;
         }
     </style>
@@ -64,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <label for="email">Email</label>
             <input type="email" name="email" value="<?php echo $todoData['email']; ?>" required><br><br>
             <label for="roll_no">Roll No</label>
-            <input type="number" name="roll_no" value="<?php echo $todoData['roll_no']; ?>" required><br><br>
+            <input type="text" name="roll_no" value="<?php echo $todoData['roll_no']; ?>" required><br><br>
             <label for="address">Address</label>
             <input type="text" name="address" value="<?php echo $todoData['address']; ?>" required><br><br>
 
